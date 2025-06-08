@@ -3,8 +3,9 @@
     // ABOUT SECTION
     .about {
         position: relative;
+        padding: 5vh 5vw;
         @include abstracts.lg {
-            padding: 10vh 0;
+            padding: 10vh 5vw;
         }
         // DESKTOP GRID LAYOUT
         // 2 COLUMNS = ARTICLE + MISSION STATEMENT CARD
@@ -23,160 +24,9 @@
 
         // SECTION TITLE PADDING BECAUSE ABOUT SECTION HAS 0 PADDING 
         .section-title {
-            padding: 5vh 5vw;
+            padding: 5vh 0vw;
         }
 
-        // ABOUT SECTION MISSION STATEMENT CONTAINER
-        .vision-mission {
-            padding: 5vh 5vw;
-            margin: 5vh 0;
-
-            @include abstracts.sm {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-            }
-            @include abstracts.xlg {
-                padding: 0;
-            }
-
-            // MISSION STATEMENT CARD
-            // CARD = TITLE[H3] + CONTENT[IMG + P]
-            .mission {
-                max-width: 500px;
-
-                // CARD TITLE
-                h3 {
-                    font-size: 1.5rem;
-                    font-size: abstracts.$font-clamp-lg;
-                    font-weight: 600;
-                    margin-bottom: 1rem;
-                    text-transform: capitalize;
-                    transition: .25s;
-                    text-align: center;
-                    // background: #000;
-                    // color: #fff;
-                }
-
-                // CONTENT = BLACK BORDER BOX WITH IMG + CENTERED P TEXT
-                // OVERFLOW HIDDEN FOR IMG IO TRANSITION 
-                .statement {
-                    border: 2px solid #000;
-                    border-radius: .25rem;
-                    width: 100%;
-                    height: 50vh;
-                    height: 20rem;
-                    overflow: hidden;
-                    transition: 1s;
-                    display: flex;
-                    flex-direction: column-reverse;
-
-                    .mission-logo {
-                        overflow: hidden;
-                        flex-basis: 90%;
-                        background: #fff;
-
-                        figure {
-                            width: 100%;
-                            height: 100%;
-                            overflow: hidden;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: contain;
-                                transition: 1s;
-                            }
-
-                            &.io-item {
-                                img {
-                                    transform: translate(0) scale(.8);
-                                }
-                            }
-
-                            &.active-item {
-                                img {
-                                    transform: translate(0) scale(1);
-                                    transition: 1s;
-                                }
-                            }
-                        }
-                    }
-
-                    .mission-content {
-                        flex-basis: 50%;
-                        background: #000;
-                        text-align: center;
-                        display: grid;
-                        place-items: center;
-                        place-content: center;
-                        padding: .5rem;
-
-                        @include abstracts.dark {
-                            background: #222;
-                        }
-
-                        @include abstracts.md {
-                            padding: 1rem;
-                            flex-basis: 20%;
-                        }
-
-                        p {
-                            color: abstracts.$text-second;
-                            font-family: abstracts.$font-content;
-                        }
-
-                        // VIEW SERVICES LINK
-                        a {
-                            text-transform: capitalize;
-                            color: abstracts.$brand-light;
-                            text-decoration: underline;
-                            
-
-                            i {
-                                font-size: .85rem;
-                                transition: .25s;
-                            }
-
-                            &:hover {
-                                i {
-                                    transform: translateX(-.25rem);
-                                    color: abstracts.$brand;
-                                }
-                            }
-                        }
-                    }
-
-                }
-            }
-
-            @media (min-width: 820px) {
-
-                // margin-top: 10vh;
-                .vision {
-                    padding: 5vh .5rem;
-                    margin: 0 5vw;
-                    width: 70%;
-
-                    h3 {
-                        font-size: 2.5rem;
-                    }
-
-                    ul {
-
-                        li {
-                            padding-bottom: 1rem;
-
-                            &::marker {
-                                color: abstracts.$marker;
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
     }
     

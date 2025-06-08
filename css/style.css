@@ -87,6 +87,7 @@ section {
   padding-top: 5vh;
   min-height: 60vh;
   border: 2px solid #c65006;
+  padding-inline: 5vw;
 }
 
 .section-title {
@@ -755,10 +756,11 @@ img {
 }
 .about {
   position: relative;
+  padding: 5vh 5vw;
 }
 @media (min-width: 820px) {
   .about {
-    padding: 10vh 0;
+    padding: 10vh 5vw;
   }
 }
 @media (min-width: 1024px) {
@@ -775,124 +777,7 @@ img {
   }
 }
 .about .section-title {
-  padding: 5vh 5vw;
-}
-.about .vision-mission {
-  padding: 5vh 5vw;
-  margin: 5vh 0;
-}
-@media (min-width: 500px) {
-  .about .vision-mission {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-@media (min-width: 1024px) {
-  .about .vision-mission {
-    padding: 0;
-  }
-}
-.about .vision-mission .mission {
-  max-width: 500px;
-}
-.about .vision-mission .mission h3 {
-  font-size: 1.5rem;
-  font-size: clamp(1.25rem, 4vw, 2rem);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-transform: capitalize;
-  transition: 0.25s;
-  text-align: center;
-}
-.about .vision-mission .mission .statement {
-  border: 2px solid #000;
-  border-radius: 0.25rem;
-  width: 100%;
-  height: 50vh;
-  height: 20rem;
-  overflow: hidden;
-  transition: 1s;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.about .vision-mission .mission .statement .mission-logo {
-  overflow: hidden;
-  flex-basis: 90%;
-  background: #fff;
-}
-.about .vision-mission .mission .statement .mission-logo figure {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.about .vision-mission .mission .statement .mission-logo figure img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: 1s;
-}
-.about .vision-mission .mission .statement .mission-logo figure.io-item img {
-  transform: translate(0) scale(0.8);
-}
-.about .vision-mission .mission .statement .mission-logo figure.active-item img {
-  transform: translate(0) scale(1);
-  transition: 1s;
-}
-.about .vision-mission .mission .statement .mission-content {
-  flex-basis: 50%;
-  background: #000;
-  text-align: center;
-  display: grid;
-  place-items: center;
-  place-content: center;
-  padding: 0.5rem;
-}
-@media (prefers-color-scheme: dark) {
-  .about .vision-mission .mission .statement .mission-content {
-    background: #222;
-  }
-}
-@media (min-width: 768px) {
-  .about .vision-mission .mission .statement .mission-content {
-    padding: 1rem;
-    flex-basis: 20%;
-  }
-}
-.about .vision-mission .mission .statement .mission-content p {
-  color: #ffffff;
-  font-family: "Content", sans-serif;
-}
-.about .vision-mission .mission .statement .mission-content a {
-  text-transform: capitalize;
-  color: #ffa500;
-  text-decoration: underline;
-}
-.about .vision-mission .mission .statement .mission-content a i {
-  font-size: 0.85rem;
-  transition: 0.25s;
-}
-.about .vision-mission .mission .statement .mission-content a:hover i {
-  transform: translateX(-0.25rem);
-  color: #c65006;
-}
-@media (min-width: 820px) {
-  .about .vision-mission .vision {
-    padding: 5vh 0.5rem;
-    margin: 0 5vw;
-    width: 70%;
-  }
-  .about .vision-mission .vision h3 {
-    font-size: 2.5rem;
-  }
-  .about .vision-mission .vision ul li {
-    padding-bottom: 1rem;
-  }
-  .about .vision-mission .vision ul li::marker {
-    color: #f4f4f4;
-  }
+  padding: 5vh 0vw;
 }
 
 .about-article {
@@ -2737,6 +2622,7 @@ aside.active .social-links a {
   background: #fafafa;
   width: 100%;
   padding: 0.25rem 1rem 1rem;
+  margin-bottom: 5vh;
   border-radius: 0.5rem;
   border: 1px solid #0001;
   position: relative;
@@ -2932,89 +2818,6 @@ aside.active .social-links a {
   color: #c65006;
   transition-delay: 150ms;
   transition-duration: 150ms;
-}
-
-#services-page .promise {
-  background: linear-gradient(90deg, #000, #000);
-  color: #fff;
-  padding: 1rem;
-  margin: 5vh 0;
-  border-radius: 0.5rem;
-  isolation: isolate;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 0.25rem 0.5rem rgba(255, 166, 0, 0.2), 0 0.5rem 1rem #0002;
-}
-@media (min-width: 768px) {
-  #services-page .promise {
-    margin: 0;
-  }
-}
-#services-page .promise h3 {
-  color: #c65006;
-  font-size: clamp(1.25rem, 4vw, 2rem);
-  text-align: center;
-  margin-bottom: 5vh;
-}
-#services-page .promise ul li {
-  margin-bottom: 5vh;
-  padding-bottom: 0.5rem;
-  list-style: none;
-  position: relative;
-}
-#services-page .promise ul li h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.025rem;
-  transition: 0.5s;
-}
-#services-page .promise ul li p {
-  color: #ddd;
-  font-weight: 400;
-  font-family: "Content", sans-serif;
-}
-#services-page .promise ul li::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.15rem;
-  background: #f4f4f4;
-  background: linear-gradient(90deg, #f4f4f4, #c65006);
-  background: linear-gradient(90deg, #c65006, darkorange, #c65006);
-  border-radius: 5px;
-  opacity: 0.5;
-  transition: 0.5s;
-  transform: scaleX(0.8);
-}
-#services-page .promise ul li:hover h4 {
-  color: #ffa500;
-  letter-spacing: normal;
-}
-#services-page .promise ul li:hover:after {
-  background: linear-gradient(90deg, #f8670d, #996300, #f8670d);
-  transform: scaleX(1);
-}
-@media (min-width: 820px) {
-  #services-page .services-flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 20vh 0 10vh;
-  }
-  #services-page .services-flex-container .section-description {
-    padding: 1rem;
-    margin: 0;
-  }
-  #services-page .services-flex-container .section-description h3 {
-    font-size: clamp(1.125rem, 2.25vw, 1.25rem);
-    margin-bottom: 5vh;
-  }
-  #services-page .services-flex-container .section-description p {
-    margin-bottom: 1rem;
-  }
 }
 
 @keyframes card-hover {
