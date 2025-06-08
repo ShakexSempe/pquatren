@@ -1,0 +1,125 @@
+@use '../abstracts';
+
+// HERO 
+#hero {
+    height: 95vh;
+    // border: 3px solid abstracts.$brand;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #f4f4f4;
+    // overflow-x: hidden;
+
+    // DESKTOP HERO
+    @include abstracts.lg {
+        // grid-template-areas: '';
+        grid-template-columns: 1fr 60%;
+        
+    }
+
+    // HERO ACTIVE BACKGROUND CLASS
+    &.active {
+        background: abstracts.$brand;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: abstracts.$brand;
+        height: 100px;
+        height: 100%;
+        width: 200px;
+        width: 100%;
+        // top: 0;
+        right: -55vw;
+        // rotate: 43deg;
+        z-index: -2;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        // border: 2px solid pink;
+
+        @include abstracts.lg {
+            // clip-path: none;
+            display: none;
+    } 
+
+    }
+
+}
+
+// HERO-IMAGE = BACKGROUND IMAGE
+.hero-image {
+    // height: 40vh;
+    overflow: hidden;
+    // border: 2px solid abstracts.$brand;
+    // border: 3px solid blue;
+    z-index: -1;
+    clip-path: polygon(47% 53%, 100% 0, 100% 100%, 69% 100%, 0 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+    @include abstracts.lg {
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        clip-path: none;
+        // clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+        background: abstracts.$brand;
+    } 
+
+    // display: none;
+
+    img {
+        object-fit: cover;
+        // object-position: 50% 10%;
+        height: 100%;
+        width: 100%;
+        @include abstracts.lg {
+            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        
+        // @include abstracts.sm {
+        //     object-position: center;
+        //     object-position: 50% 30%;
+        //     margin-left: auto;
+        //     width: 500px;
+        // }
+        // @include abstracts.lg {
+        //     width: 55vw;
+        //     object-position: 50% 0%;
+        // }
+    }
+}
+
+// HERO PAGE TITLE
+.hero-title {
+    // border: 3px solid blue;
+    position: relative;
+    padding: calc(8vh + 15vh) 5vw 1rem 5vw;
+    max-width: 600px;
+
+    // DESKTOP HERO
+    @include abstracts.lg {
+        padding: 30vh 5vw;
+    }
+
+    h1 {
+            line-height: 1.2;
+            margin-bottom: 1rem; 
+            font-size: abstracts.$font-clamp-lg;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        p {
+            line-height: 1.6;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+            &::after {
+                content: '.';
+            }
+            // font-family: abstracts.$font-content;
+        }
+
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META THEME COLOR -->
+    <meta name="theme-color" content="#000000">
+    <!-- META OG IMAGE -->
+    <meta name="image" property="og:image" content="https://pquatren.netlify.app/img/orich.jpg">
+    <!-- TITLE -->
+    <title>P_Quatren || Student Accommodation Maintenance</title>
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="Student Accommodation Maintenance Specialists">
+    <!-- KEYWORDS -->
+    <meta name="keywords" content="Accommodation Maintenance Specialists">
+    
+    <!-- PRELOAD -->
+    <link rel="preload" href="fonts/prompt-regular-webfont.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="preload" href="js/app.js" as="script" />
+    <link rel="preload" href="img/orich-logo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="img/orich.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="img/hero-mobile-web.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="img/hero_400.jpg" as="image" media="(max-width: 450px)">
+    <link rel="preload" href="img/hero_800.jpg" as="image" media="(min-width: 450.1px)">
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JAVASCRIPT -->
+    <script src="js/app.js" defer></script>
+    
+
+    <!-- META FAVICON -->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="f8650c">
+    
+
+</head>
+
+<body>
+    
+
+    <div class="container">
+
+        <!-- HEADER = 1) LOGO 2) SECTION & PAGE NAVIGATION LINKS -->
+        <header id="header" data-header class="index-header hero-header">
+            <!-- SKIP LINK -->
+            <a href="#main" class="skip-link" tabindex="0">skip to main content</a>
+            <!-- LOGO = LINK TO TOP OF THE PAGE -->
+            <div class="logo">
+                    <a href="#">
+                        <picture>
+                            <!-- <source
+                            type="image/webp"
+                            srcset="img/orich-logo.webp"
+                            width="260"
+                            height="255"
+                            > -->
+                            <img src="img/logo.bmp" width="250" height="250" alt="Orich Trading & Projects logo">
+                        </picture>
+                    </a>
+            </div>
+            <!-- DESKTOP NAVBAR & MOBILE HAMBURGER MENU -->
+            <div class="navigation">
+                <!-- HAMBURGER MENU = HIDDEN ON DESKTOPS -->
+                <div id="toggle" class="toggle">
+                    <div class="bar"></div>
+                </div>
+                <!-- NAVBAR = HIDDEN ON MOBILE SCREENS -->
+                <nav id="nav">
+                    <ul>
+                        <!-- WEBSITE PAGE LINKS -->
+                        <li><a class="nav-link" href="#">home</a></li>
+                        <li><a class="nav-link" href="pages/about.html">about</a></li>
+                        <li><a class="nav-link" href="pages/services.html">services</a></li>
+                        <li><a class="nav-link" href="pages/projects.html">projects</a></li>
+                        
+                        <!-- CONTACT DROPDOWN BUTTON -->
+                        <li title="Contact Dropdown" class="dropdown">
+                            <button class="dropdown-btn">contact
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a title="Contact-info" href="#contact">contact info</a>
+                                <a title="Contact-page" href="pages/contact.html">contact page</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SIDEBAR = HIDDEN ON DESKTOPS -->
+                <!-- SIDEBAR ACTIVATED BY JAVASCRIPT CLICK EVENT LISTENER -->
+                <aside id="aside" class="aside" >
+                    
+                    <!-- WEBSITE PAGE BROWSE -->
+                    <ul>
+
+                        <!-- HOME DROPDOWN -->
+                        <li><a href="#" title="Home-page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-homepage-32-light.png" height="32" width="32" alt="Home page icon" >
+                            home</a>
+                        </li>
+
+                        <!-- ABOUT DROPDOWN -->
+                        <li><a href="pages/about.html" title="About page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-user-48-light.png" height="48" width="48" alt="user icon" >
+                            about</a>
+                        </li>
+
+                        <!-- SERVICES DROPDOWN -->
+                        <li><a href="pages/services.html" title="Services page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-service-48-light.png" height="48" width="48" alt="Tools icon" >
+                            services</a>
+                        </li>
+
+                        <!-- PROJECTS DROPDOWN -->
+                        <li><a href="pages/projects.html" title="Projects page" class="nav-link">
+                            <img class="icon nav-icon" src="icons/outline/icons8-four-squares-32-light.png" height="48" width="48" alt="Tasks icon" >
+                            projects</a>
+                        </li>
+                    </ul>
+
+                    <!-- SOCIAL & CONTACT DETAILS -->
+                    <div class="social-links">
+                        
+                        <a target="_blank" style="--i:1;" title="Whatsapp number" href="https://wa.me/27729270758">
+                            <img class="icon" src="icons/aside/icons8-whatsapp-50.png" height="50" width="50" alt="Whatsapp icon">
+                            072 927 0758
+                        </a>
+
+                        <a target="_blank" style="--i:2;" title="Phone number" href="tel:0734811460">
+                            <img class="icon" src="icons/brand-icons/icons8-outgoing-call-48-brand.png" height="48" width="48" alt="Outgoing phone-call icon">
+                            073 481 1460
+                        </a>
+
+                        <a target="_blank" style="--i:3;" title="Email address" href="mailto:info@orichtrading.co.za">
+                            <img class="icon" src="icons/solid/icons8-envelope-48-brand.png" height="48" width="48" alt="envelope icon">
+                            info@orichtrading.co.za
+                        </a>
+
+                        <a target="_blank" style="--i:5;" title="Instagram account" href="https://www.instagram.com/orichtradingprojects/?fbclid=IwAR3F4lHFYwmHfR52gYtnQj-8hMbTLDAuQd9yX4IndLP05Ocfu3ZUZQkSpyk">
+                            <img class="icon" src="icons/solid/icons8-instagram-48-brand.png" height="48" width="48"  alt="Instagram icon">
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+        </header>
+        
+        <!-- HERO -->
+        <div id="hero">
+
+            <div class="hero-title">
+                <h1>Student Accommodation Maintenance specialists</h1>
+                <p>servicing student accommodations with a comprehensive range of offerings around Bloemfontein</p>
+            </div>
+
+            <!-- HERO IMAGE -->
+            <picture class="hero-image">
+                <!-- <source
+                media="(min-width: 820.1px)"
+                width="800"
+                height="1035"
+                srcset="img/hero_800.webp"
+                >
+                <source
+                type="image/webp"
+                media="(max-width: 820px)"
+                width="488"
+                height="580"
+                srcset="img/hero-mobile-web.webp"
+                > -->
+
+                <img src="img/nathan-waters-j7q-Z9DV3zw-unsplash -md.jpg" width="488" height="580" alt="Construction workers">
+            </picture>
+            
+            
+        </div>
+        
+        <!-- MAIN -->
+        <main class="main index-main" id="main" >
+
+            
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about">
+
+                <header class="section-title io-item">
+                    <h2 title="About Orich">about us</h2>
+                </header>
+
+                <p>
+                    
+                </p>
+
+            </section>
+            
+            <!-- SERVICES SECTION -->
+            <section id="services" class="services">
+
+                <header class="section-title io-item">
+                    <h2 title="Services">services</h2>
+                </header>
+
+            </section>
+            
+            <!-- FOOTER = 1) CONTACT DETAILS. 2) CONTACT FORM. 3) COPYRIGHT SECTION -->
+            <div id="contact">
+                
+                <header class="section-title io-item">
+                    <h2 title="Contact Info">contact us</h2>
+                </header>
+
+                <!-- FORM -->
+                <form id="form" class="contact-form" target="_blank" action="https://formsubmit.co/info@orichtrading.co.za"
+                    method="POST">
+                    
+                    <div class="container-title form-container-title io-item">
+                        <h2>let's talk</h2>
+                    </div>
+
+                    <!-- NAME -->
+                    <label for="name">name :</label>
+                    <input type="text" tabindex="0" name="Name" id="username" placeholder="Enter your full name.." minlength="2"
+                        required>
+                    <!-- EMAIL -->
+                    <label for="email">email :</label>
+                    <input type="email" name="Email" id="email" placeholder="Enter your email address.." 
+                        required>
+                    <!-- TEXTAREA -->
+                    <label for="message">subject of enquiry :</label>
+                    <textarea name="Subject" rows="4" cols="10" minlength="2" placeholder="eg. Bathroom Set Installation"
+                        id="message" required></textarea>
+
+                    <button type="submit" class="cta-btn btn-lg" title="submit form" >submit enquiry
+                        <img class="icon" src="icons/contact/icons8-sent-100.png" alt="sent envelope" height="100" width="100" >
+                    </button>
+
+                    <!-- form options -->
+                    <input type="hidden" name="_subject" value="New submission!">
+                    <input type="hidden" name="_autoresponse"
+                        value="We have has received your enquiry. We will be in touch shortly.Thank you.">
+                    <input type="hidden" name="_next" value="https://orichtrading/pages/thanks.html">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_cc" value="orichtradingprojects@gmail.com">
+
+
+                </form>
+                <!-- END OF FORM -->
+            </div>
+            
+            <!-- FOOTER -->
+            <div class="footer" id="footer">
+                <!-- FOOTER LOGO -->
+                <div class="footer-logo">
+                    <picture>
+                        <source
+                        type="image/webp"
+                        srcset="img/orich-logo.webp"
+                        width="250"
+                        height="250"
+                        >
+                        <img src="img/orich-logo.png" loading="lazy" width="250" height="250" alt="Orich Trading & Projects Logo">
+                    </picture>
+                </div>
+
+                <!-- FOOTER COPYRIGHT INFO -->
+                <div class="footer-item footer-copyright">
+                    <div class="footer-item-title">
+                        <h3>all rights reserved</h3>
+                    </div>
+                    <p>copyright &copy; Orich trading & projects</p>
+                    <p>Johannesburg, Gauteng</p>
+                    <p>web design: <a href="https://shakexsempe.netlify.app/" target="_blank">shakex sempe</a></p>
+                    <p><span id="date"></span></p>
+                </div>
+
+                <!-- FOOTER BROWSE -->
+                <div class="footer-item">
+                    <div class="footer-item-title">
+                        <h3>browse website</h3>
+                    </div>
+                    <ul class="footer-list page-links">
+
+                        <li>
+                            <img class="icon" src="icons/contact/icons8-home-page-48.png" alt="home page icon" height="48" width="48">
+                            <a href="#">home</a>
+                        </li>
+
+                        <li>
+                            <img class="icon" src="icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
+                            <a href="pages/about.html">about</a>
+                        </li>
+
+                        <li>
+                            <img class="icon" src="icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
+                            <a href="pages/services.html">services</a>
+                        </li>
+
+                        <li>
+                            <img class="icon" src="icons/solid/icons8-link-48-dark.png" alt="open link icon" height="48" width="48">
+                            <a href="pages/projects.html">projects</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- FOOTER CONTACT ITEMS -->
+                <div class="footer-item contact-items">
+
+                    <div class="footer-item-title">
+                        <h3>contact details</h3>
+                    </div>
+
+                    <ul class="footer-list contact-links">
+
+                        <li>
+                            <img src="icons/solid/icons8-envelope-48-dark.png" height="48" width="48" alt="envelope icon" class="icon">
+                            <a href="mailto:info@orichtrading.co.za">info@orichtrading.co.za</a>
+                        </li>
+                        <li>
+                            <img src="icons/solid/icons8-outgoing-call-48-dark.png" height="48" width="48" alt="outgoing call icon" class="icon">
+                            <a target="_blank" style="--i:2;" href="tel:0734811460">073 481 1460</a>
+                        </li>
+                        <li>
+                            <img src="icons/solid/icons8-facebook-48-dark.png" height="48" width="48" alt="Facebook icon" class="icon">
+                            <a target="_blank" href="https://www.facebook.com/photo/?fbid=130044952743326&set=a.130045042743317">Facebook</a>
+                        </li>
+                        <li>
+                            <img src="icons/solid/icons8-info-squared-48-dark.png" height="48" width="48" alt="Info square icon" class="icon">
+                            <a href="pages/contact.html">Contact Page</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+        </main>
+
+        <!-- FOOTER-NAVIGATION -->
+        <div class="bottom-nav">
+            
+            <!-- NAV-ITEM 1 -->
+            <div class="item item1 menu-target">
+                
+                <div class="active-icon">
+                    <a class="contact-item mobile-contact-item" title="Contact" href="#contact">
+                        
+                        <img class="icon outline-icon" src="icons/outline/icons8-envelope-48-light.png" width="48" height="48" alt="envelope icon">
+                        <img class="icon solid-icon" src="icons/solid/icons8-envelope-48-light.png" width="48" height="48" alt="envelope icon">
+
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- NAV-ITEM 2 -->
+            <div class="item item2">
+
+                <div class="active-icon">
+
+                    <a href="#" title="Home">
+                        <img class="icon outline-icon" src="icons/outline/icons8-homepage-32-light.png" width="32" height="32" alt="Home-page icon">
+                        <img class="icon solid-icon" src="icons/solid/icons8-homepage-48-light.png" width="32" height="32" alt="Home-page icon">
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- NAV-ITEM 3 -->
+            <div class="item item3 menu-target">
+
+                <div class="active-icon">
+
+                    <a class="contact-item" title="Footer" href="#footer">
+                        <img class="icon outline-icon" src="icons/outline/icons8-four-squares-32-light.png" width="32" height="32" alt="four-squares icon">
+                        <img class="icon solid-icon" src="icons/solid/icons8-four-squares-48-light.png" width="32" height="32" alt="four-squares icon">
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script>
+        const date = document.getElementById("date");
+        date.innerHTML = new Date().getFullYear();
+    </script>
+    
+</body>
+</html>
