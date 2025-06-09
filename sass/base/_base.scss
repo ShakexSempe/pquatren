@@ -54,7 +54,7 @@ main {
 section {
     padding-top: 5vh;
     min-height: 60vh;
-    border: 2px solid abstracts.$brand;
+    // border: 2px solid abstracts.$brand;
     padding-inline: 5vw;
 }
 
@@ -80,6 +80,7 @@ section {
             width: 100%;
             height: .125rem;
             background: abstracts.$brand-border;
+            background: #000;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             transition: .5s;
