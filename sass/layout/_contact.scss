@@ -29,7 +29,7 @@
     .contact-item {
         background-color: #333;
         border-radius: .5rem;
-        padding: 1rem .5rem;
+        padding: 0.5rem;
         width: 100%;
         transition: .3s;
     
@@ -37,7 +37,7 @@
             width: 100%;
             height: auto;
             margin: 0;
-            padding: 1rem;
+            // padding: 1rem;
             z-index: 2;
         }
     

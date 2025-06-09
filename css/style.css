@@ -785,16 +785,6 @@ img {
   text-transform: none;
   font-family: "Content", sans-serif;
 }
-@media (min-width: 500px) {
-  .about-article {
-    margin: 5vh 5vw;
-  }
-}
-@media (min-width: 1024px) {
-  .about-article {
-    width: 100%;
-  }
-}
 .about-article p.article-intro {
   text-wrap: balance;
 }
@@ -847,6 +837,36 @@ img {
   .about-article ul {
     background: #333;
   }
+}
+
+.mission-container {
+  position: relative;
+  isolation: isolate;
+}
+.mission-container .container-bg {
+  position: sticky;
+  top: 8vh;
+  height: 85vh;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: left;
+}
+.mission-container article {
+  padding: 5vh 5vw;
+  margin-bottom: 40vh;
+  background-color: #fff;
+  border-bottom: 2px solid #c65006;
+}
+.mission-container article h4 {
+  text-transform: capitalize;
+  font-size: clamp(1.125rem, 2.25vw, 1.25rem);
+}
+.mission-container article p {
+  text-transform: lowercase;
+}
+.mission-container article p::first-letter {
+  text-transform: capitalize;
 }
 
 #banner {
@@ -1034,7 +1054,7 @@ img {
 #contact .contact-item {
   background-color: #333;
   border-radius: 0.5rem;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   width: 100%;
   transition: 0.3s;
 }
@@ -1043,7 +1063,6 @@ img {
     width: 100%;
     height: auto;
     margin: 0;
-    padding: 1rem;
     z-index: 2;
   }
 }
@@ -1741,11 +1760,6 @@ aside.active .social-links a {
   opacity: 0.05;
   z-index: -1;
 }
-@media (min-width: 820px) {
-  .hero-title {
-    padding: 30vh 5vw;
-  }
-}
 .hero-title h1 {
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -2368,13 +2382,19 @@ aside.active .social-links a {
 .service-item {
   background: #fafafa;
   width: 100%;
-  padding: 0.25rem 1rem 1rem;
+  padding: 1rem;
   margin-bottom: 5vh;
   border-radius: 0.5rem;
   border: 1px solid #0001;
   position: relative;
   isolation: isolate;
   transition: 250ms;
+}
+.service-item ul {
+  list-style: none;
+}
+.service-item ul li {
+  text-transform: capitalize;
 }
 @media (min-width: 768px) {
   .service-item {

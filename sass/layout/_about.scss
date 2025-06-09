@@ -1,119 +1,155 @@
 @use '../abstracts';
 
-    // ABOUT SECTION
-    .about {
-        position: relative;
-        padding: 5vh 5vw;
-        @include abstracts.lg {
-            padding: 10vh 5vw;
-        }
-        // DESKTOP GRID LAYOUT
-        // 2 COLUMNS = ARTICLE + MISSION STATEMENT CARD
-        @include abstracts.xlg {
-            .flex-container {
-                @include abstracts.grid(2, 10vw);
-                
-            }
-        }
+// ABOUT SECTION
+.about {
+    position: relative;
+    padding: 5vh 5vw;
 
-        // DARK-THEME 
-        @include abstracts.dark {
-            background-color: #000;
-            color: #f4f4f4;
-        }
-
-        // SECTION TITLE PADDING BECAUSE ABOUT SECTION HAS 0 PADDING 
-        .section-title {
-            padding: 5vh 0vw;
-        }
-
+    @include abstracts.lg {
+        padding: 10vh 5vw;
     }
 
+    // DESKTOP GRID LAYOUT
+    // 2 COLUMNS = ARTICLE + MISSION STATEMENT CARD
+    @include abstracts.xlg {
+        .flex-container {
+            @include abstracts.grid(2, 10vw);
 
-    
-    // ABOUT ARTICLE
-    .about-article {
-        // margin: 5vh 1rem 10vh 5vw;
-        text-transform: none;
-        font-family: abstracts.$font-content;
-
-        // border: 2px solid red;
-        @include abstracts.sm {
-            margin: 5vh 5vw;
         }
-        @include abstracts.xlg {
-            width: 100%;
-        }
-        // ABOUT ARTICLE BODY CONTENT
-        // = ONLY ON ABOUT PAGE. INDEX ABOUT SECTION = INTRO ONLY
-        
+    }
 
-        // FIRST LETTER OF THIS P ARTICLE HAS MAGAZINE STYLE FIRST LETTER
-        p {
-            &.article-intro {
-                text-wrap: balance;
-                &::first-letter {
-                    font-size: 2rem;
-                    padding: 0 .2rem 0 .05rem;
-                    background: #000;
-                    color: #fff;
-                    float: left;
-                    margin-right: 0.1rem;
-                    border-radius: .25rem;
-                    box-shadow: 2px 3px 3px hsla(211, 16%, 34%, 0.150);
-                    text-shadow: 2px 2px 0px #f8650c;
+    // DARK-THEME 
+    @include abstracts.dark {
+        background-color: #000;
+        color: #f4f4f4;
+    }
 
-                }
+    // SECTION TITLE PADDING BECAUSE ABOUT SECTION HAS 0 PADDING 
+    .section-title {
+        padding: 5vh 0vw;
+    }
+
+}
+
+// ABOUT ARTICLE
+.about-article {
+    text-transform: none;
+    font-family: abstracts.$font-content;
+
+    // // border: 2px solid red;
+    // @include abstracts.sm {
+    //     margin: 5vh 5vw;
+    // }
+    // @include abstracts.xlg {
+    //     width: 100%;
+    // }
+    // ABOUT ARTICLE BODY CONTENT
+    // = ONLY ON ABOUT PAGE. INDEX ABOUT SECTION = INTRO ONLY
+
+
+    // FIRST LETTER OF THIS P ARTICLE HAS MAGAZINE STYLE FIRST LETTER
+    p {
+        &.article-intro {
+            text-wrap: balance;
+
+            &::first-letter {
+                font-size: 2rem;
+                padding: 0 .2rem 0 .05rem;
+                background: #000;
+                color: #fff;
+                float: left;
+                margin-right: 0.1rem;
+                border-radius: .25rem;
+                box-shadow: 2px 3px 3px hsla(211, 16%, 34%, 0.150);
+                text-shadow: 2px 2px 0px #f8650c;
+
             }
+        }
+
+        a {
+            color: abstracts.$brand;
+            text-transform: capitalize;
+        }
+    }
+
+    // CORE SERVICES ARTICLE LIST WITH GREY GRADIENT BG
+    ul {
+        margin: .5rem 0;
+        padding: .5rem;
+        position: relative;
+        border-radius: .25rem;
+        background: linear-gradient(90deg, #ddd, #fff);
+
+        li {
+            position: relative;
+            list-style: none;
+            margin-bottom: .25rem;
+
+            font-family: abstracts.$font-brand;
+            font-size: 1rem;
+            font-size: abstracts.$font-clamp-sm;
+            font-weight: 500;
+            text-transform: capitalize;
 
             a {
-                color: abstracts.$brand;
-                text-transform: capitalize;
-            }
-        }
+                width: 70%;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
 
-        // CORE SERVICES ARTICLE LIST WITH GREY GRADIENT BG
-        ul {
-            margin: .5rem 0;
-            padding: .5rem;
-            position: relative;
-            border-radius: .25rem;
-            background: linear-gradient(90deg, #ddd, #fff);
-            
-            li {
-                position: relative;
-                list-style: none;
-                margin-bottom: .25rem;
-                
-                font-family: abstracts.$font-brand;
-                font-size: 1rem;
-                font-size: abstracts.$font-clamp-sm;
-                font-weight: 500;
-                text-transform: capitalize;
+                .icon {
+                    opacity: 0;
+                }
 
-                a {
-                    width: 70%;
-                    display: flex;
-                    align-items: center;
-                    gap: 1.5rem;
-
+                &:hover,
+                &:focus {
                     .icon {
-                        opacity: 0;
-                    }
-
-                    &:hover, &:focus {
-                        .icon {
-                            opacity: 1;
-                            transform: translateX(-0.5rem);
-                        }
+                        opacity: 1;
+                        transform: translateX(-0.5rem);
                     }
                 }
             }
-
-            @include abstracts.dark {
-                background: #333;
-            }
         }
 
+        @include abstracts.dark {
+            background: #333;
+        }
     }
+
+}
+
+.mission-container {
+    // height: 80vh;
+    // border: 2px solid red;
+    // min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+
+    .container-bg {
+        position: sticky;
+        top: 8vh;
+        height: 85vh;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover;
+        object-position: left;
+    }
+    
+    article {
+        padding: 5vh 5vw;
+        margin-bottom: 40vh;
+        background-color: #fff;
+        border-bottom: 2px solid abstracts.$brand;
+        h4 {
+            text-transform: capitalize;
+            font-size: abstracts.$font-clamp-md;
+        }
+        p {
+            text-transform: lowercase;
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
 
