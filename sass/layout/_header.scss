@@ -192,7 +192,7 @@
     height: 100%;
     width: auto;
     width: 150px;
-    // border: 2px solid red;
+    border-left: 1px solid abstracts.$brand;
 
     a {
         overflow: hidden;
@@ -365,6 +365,7 @@
 aside {
     position: fixed;
     top: 7vh;
+    top: abstracts.$nav-height;
     right: -100vw;
     width: 100%;
     height: 100vh;
@@ -381,7 +382,7 @@ aside {
 
     ul {
         // border: 2px solid abstracts.$brand-light;
-        padding: 2rem 0 0;
+        padding: 15vh 0 0;
         width: 70vw;
         height: 100%;
         height: auto;
@@ -398,133 +399,6 @@ aside {
             transition: 1s;
             transform: translateX(2em);
             opacity: 0;
-
-            &.aside-dropdown {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-
-                // ASIDE BUTTON LINKS
-                button {
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-                    padding: .5rem 0;
-                    background-color: transparent;
-                    color: abstracts.$nav-links;
-                    font-size: 1rem;
-                    text-transform: capitalize;
-                    text-decoration: none;
-                    letter-spacing: .025rem;
-                    transition: .2s;
-                    border: none;
-
-                    i {
-                        position: relative;
-                        color: #fff9;
-                        width: 1.5rem;
-                        border: 2px solid red;
-                        &.fa-caret-down {
-                            transition: .3s;
-                            margin-left: auto;
-                        }
-                        &:first-of-type {
-                            margin-right: 1rem;
-                        }
-                    }
-
-
-                }
-
-                .aside-dropdown-content {
-                    position: relative;
-                    top: 0;
-                    // left: 3.75rem;
-                    width: 100%;
-                    height: 0;
-                    // padding: 1rem;
-                    overflow: hidden;
-                    background-color: abstracts.$bg-second;
-                    display: flex;
-                    flex-direction: column;
-                    transition: .5s;
-
-                    a {
-                        text-transform: capitalize;
-                        margin-left: auto;
-                        width: auto;
-                        letter-spacing: .025rem;
-                        font-weight: 300;
-
-                        &:hover {
-                            color: abstracts.$text-second;
-                            transition: .2s;
-                        }
-                    }
-
-                    // SERVICE PAGE ASIDE MENU ITEMS
-                    &.services-dropdown {
-                        a {
-                            width: 100%;
-                            text-align: right;
-                            text-transform: capitalize;
-                        }
-                    }
-                }
-
-                i {
-                    color: abstracts.$brand-light;
-                    // width: 20%;
-                    opacity: .3;
-                    // padding: .1em;
-                    // margin-right: auto;
-                    position: absolute;
-                    left: .5rem;
-                }
-
-                &:hover {
-                    transition: .2s;
-                    border-color: #fff8;
-                    border-radius: 0;
-
-                    button {
-                        color: abstracts.$brand-light;
-                        transition: .2s;
-
-                        i {
-                            transition: .2s;
-                            color: #fff6;
-
-                            &.fa-caret-down {
-                                transform: rotate(180deg);
-                            }
-                        }
-                    }
-
-                    .aside-dropdown-content {
-                        // display: block;
-                        height: 18vh;
-
-                        a {
-                            &:hover {
-                                color: abstracts.$brand-light;
-                            }
-                        }
-                    }
-
-                    // SERVICE PAGE DROPDOWN HOVER STATE
-                    .services-dropdown {
-                        height: 65vh;
-                    }
-
-                    .projects-dropdown {
-                        height: 60vh;
-                        overflow-y: auto;
-                    }
-
-                }
-                
-            }
 
             .nav-link {
                 color: abstracts.$nav-links;
@@ -568,6 +442,9 @@ aside {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+
+        display: none;
+
         opacity: 1;
         transition: .5s;
         background: #111;
@@ -606,7 +483,7 @@ aside {
     // HAMBURGER ACTIVE CLASS
     &.active {
         // DISPLAY ASIDE FROM RIGHT
-        right: -1rem;
+        right: -5vw;
         // DISPLAY UL
         ul {
             li {

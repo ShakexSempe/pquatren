@@ -7,11 +7,19 @@
     max-width: 100%;
     display: grid;
     grid-template-rows: auto auto;
+    grid-template-rows: 40vh auto;
     position: relative;
     isolation: isolate;
     overflow: hidden;
     background: #f4f4f4;
+    background: #ffff;
     // overflow-x: hidden;
+
+    @include abstracts.md {
+        grid-template-rows: 1fr;
+        // grid-template-columns: 60% auto;
+    }
+
 
     // DESKTOP HERO
     @include abstracts.lg {
@@ -51,13 +59,18 @@
 
 // HERO-IMAGE = BACKGROUND IMAGE
 .hero-image {
-    // height: 40vh;
-    overflow: hidden;
+    // height: 100%;
+    overflow: clip;
     // border: 2px solid abstracts.$brand;
     // border: 3px solid blue;
     z-index: -1;
-    clip-path: polygon(47% 53%, 100% 0, 100% 100%, 69% 100%, 0 100%);
+    transition: 250ms;
+    // clip-path: polygon(47% 53%, 100% 0, 100% 100%, 69% 100%, 0 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+
+    @include abstracts.sm {
+        clip-path: polygon(100% 0, 0% 50%, 100% 100%);
+    }
 
     @include abstracts.lg {
         clip-path: polygon(100% 0, 0% 100%, 100% 100%);
@@ -66,17 +79,40 @@
         background: abstracts.$brand;
     } 
 
-    // display: none;
-
     img {
-        object-fit: cover;
-        // object-position: 50% 10%;
-        height: 100%;
-        width: 100%;
+
         @include abstracts.lg {
             clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
         }
 
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        
+        // animation: fade-in 2s linear;
+        // animation-timeline: view();
+        // animation-timeline: view(500px 200px);
+        // animation-timeline: view(400px 400px);
+        // animation-range: -70vh 30vh;
+        // animation-range-start: 90vh;
+        // animation-range-start: 0vh;
+        // animation-range-start: contain;
+        
+        // animation-range-end: 450px;
+        // animation-range-end: contain;
+        // animation-range-end: 95vh;
+
+        @keyframes fade-in {
+            from {
+                scale: 0.25;
+                opacity: .25;
+            }
+
+            to {
+                scale: 10;
+                opacity: 1;
+            }
+        }
         
         // @include abstracts.sm {
         //     object-position: center;
@@ -95,8 +131,24 @@
 .hero-title {
     // border: 3px solid blue;
     position: relative;
-    padding: calc(8vh + 15vh) 5vw 1rem 5vw;
-    max-width: 600px;
+    top: calc(8vh + 20vh);
+    padding: 0 5vw;
+    height: min-content;
+    // padding: calc(8vh + 15vh) 5vw 1rem 5vw;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-color: abstracts.$brand;
+        filter: blur(2rem);
+        opacity: 0.05;
+        z-index: -1;
+    }
 
     // DESKTOP HERO
     @include abstracts.lg {

@@ -14,7 +14,8 @@
     transition: .5s;
 
     .bar {
-        background-color: #fff;
+        background-color: abstracts.$brand;
+        background-color: #000;
         width: 100%;
         height: .1em;
         position: relative;
@@ -27,7 +28,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #fff;
+            background-color: inherit;
             transition: .25s;
         }
         &::before {
