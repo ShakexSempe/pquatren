@@ -121,7 +121,7 @@ section {
 .section-title.io-item h2::after {
   translate: 0 0.5rem;
   opacity: 0;
-  transition: 100ms;
+  transition: 1000ms;
 }
 .section-title.active-item h2::after {
   opacity: 1;
