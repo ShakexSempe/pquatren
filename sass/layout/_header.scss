@@ -198,6 +198,11 @@
         overflow: hidden;
         width: 15rem;
         transition: .25s;
+        cursor: default;
+
+        @include abstracts.md {
+            cursor: pointer;
+        }
 
         img {
             height: 100%;
@@ -207,7 +212,13 @@
             border-bottom-left-radius: abstracts.$border-radius-xsm;
             border-bottom-right-radius: abstracts.$border-radius-xsm;
         }
+
+        
     }
+        
+        &:active {
+            scale: .925;
+        }
 }
 
 .navigation {

@@ -1397,6 +1397,12 @@ img {
   overflow: hidden;
   width: 15rem;
   transition: 0.25s;
+  cursor: default;
+}
+@media (min-width: 768px) {
+  .logo a {
+    cursor: pointer;
+  }
 }
 .logo a img {
   height: 100%;
@@ -1405,6 +1411,9 @@ img {
   object-position: left;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
+}
+.logo:active {
+  scale: 0.925;
 }
 
 .navigation {
@@ -1779,7 +1788,7 @@ aside.active .social-links a {
 .hero-title p {
   width: 300px;
 }
-@media (min-width: 768px) {
+@media (min-width: 820px) {
   .hero-title p {
     width: auto;
   }
@@ -2404,7 +2413,7 @@ aside.active .social-links a {
   transition: 250ms;
 }
 .service-item h3 {
-  color: #c65006;
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 .service-item ul {
   list-style: none;

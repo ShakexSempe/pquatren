@@ -160,7 +160,7 @@
 
         p {
             width: 300px;
-            @include abstracts.md {
+            @include abstracts.lg {
                 width: auto;
             }
             &::first-letter {
