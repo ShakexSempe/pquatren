@@ -61,19 +61,19 @@ section {
 }
 
 .section-title {
+    // border: 2px solid red;
     text-transform: capitalize;
     padding: 5vh 0;
     overflow: hidden;
-    width: max-content;
     position: relative;
-
+    width: max-content;
+    
     h2 {
+        // border: 2px solid blue;
         position: relative;
-        font-size: 1.5rem;
         font-size: abstracts.$font-clamp-lg;
         font-weight: 600;
         text-transform: uppercase;
-        padding-right: 0.5rem;
 
         // TITLE UNDERLINE
         &::after {
