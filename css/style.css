@@ -42,7 +42,7 @@
   font-display: swap;
 }
 body {
-  font-family: "Prompt", sans-serif;
+  font-family: "Content", sans-serif;
 }
 
 .container {
@@ -181,7 +181,7 @@ h3 {
   text-wrap: balance;
   text-transform: capitalize;
   font-size: 1.025rem;
-  font-size: clamp(1.125rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
   font-weight: 500;
 }
 
@@ -234,6 +234,11 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  font-weight: 600;
+}
+
+p, li {
+  text-wrap: pretty;
 }
 
 img {
@@ -557,7 +562,7 @@ img {
 #form input, #form textarea {
   display: block;
   padding: 1rem 0.5rem;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1.5rem;
   width: 100%;
   border: none;
   outline: 1px solid #c65006;
@@ -570,7 +575,7 @@ img {
 }
 @media (min-width: 768px) {
   #form input, #form textarea {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 }
 #form input:valid, #form textarea:valid {
@@ -592,7 +597,7 @@ img {
 }
 #form button {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
 }
 #form button:active .icon, #form button:focus .icon, #form button:hover .icon {
   transform: rotate(20deg) translateX(0.25rem);
@@ -852,15 +857,19 @@ img {
   object-fit: cover;
   object-position: left;
 }
+.mission-container .flex-container {
+  display: grid;
+  gap: 20vh;
+}
 .mission-container article {
   padding: 5vh 5vw;
-  margin-bottom: 40vh;
   background-color: #fff;
   border-bottom: 2px solid #c65006;
 }
 .mission-container article h4 {
   text-transform: capitalize;
-  font-size: clamp(1.125rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
+  margin-bottom: 1rem;
 }
 .mission-container article p {
   text-transform: lowercase;
@@ -1746,6 +1755,7 @@ aside.active .social-links a {
   top: calc(8vh + 20vh);
   padding: 0 5vw;
   height: min-content;
+  width: 450px;
 }
 .hero-title::after {
   content: "";
@@ -1760,11 +1770,16 @@ aside.active .social-links a {
   opacity: 0.05;
   z-index: -1;
 }
+@media (min-width: 820px) {
+  .hero-title {
+    width: auto;
+  }
+}
 .hero-title h1 {
-  line-height: 1.2;
+  line-height: 1.4;
   margin-bottom: 1rem;
   font-size: clamp(1.25rem, 4vw, 2rem);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
 }
 .hero-title p {
@@ -2047,7 +2062,7 @@ aside.active .social-links a {
   text-transform: capitalize;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
-  font-size: clamp(1.125rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
   transition: 0.25s;
 }
 @media (min-width: 500px) {
@@ -2390,6 +2405,9 @@ aside.active .social-links a {
   isolation: isolate;
   transition: 250ms;
 }
+.service-item h3 {
+  color: #c65006;
+}
 .service-item ul {
   list-style: none;
 }
@@ -2398,7 +2416,7 @@ aside.active .social-links a {
 }
 @media (min-width: 768px) {
   .service-item {
-    padding: 0rem 1rem 4rem;
+    padding: 0.5rem 0.75rem;
   }
 }
 .service-item::before, .service-item::after {
@@ -2437,7 +2455,7 @@ aside.active .social-links a {
 .service-item .service-core h4 {
   text-transform: capitalize;
   font-size: 1.25rem;
-  font-size: clamp(1.125rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
   font-weight: 500;
   transition: 250ms ease;
 }

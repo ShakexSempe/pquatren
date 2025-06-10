@@ -1,7 +1,9 @@
 @use '../abstracts';
 
 body {
-    font-family: 'Prompt', sans-serif;
+    // font-family: 'Prompt', sans-serif;
+    // font-family: 'Prompt', sans-serif;
+    font-family: abstracts.$font-content;
 }
 
 .container {

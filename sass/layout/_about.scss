@@ -135,14 +135,22 @@
         object-position: left;
     }
     
+
+    .flex-container {
+        display: grid;
+        gap: 20vh;
+    }
+
     article {
         padding: 5vh 5vw;
-        margin-bottom: 40vh;
         background-color: #fff;
         border-bottom: 2px solid abstracts.$brand;
+
+
         h4 {
             text-transform: capitalize;
             font-size: abstracts.$font-clamp-md;
+            margin-bottom: 1rem;
         }
         p {
             text-transform: lowercase;

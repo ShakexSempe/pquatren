@@ -59,13 +59,9 @@
 
 // HERO-IMAGE = BACKGROUND IMAGE
 .hero-image {
-    // height: 100%;
     overflow: clip;
-    // border: 2px solid abstracts.$brand;
-    // border: 3px solid blue;
     z-index: -1;
     transition: 250ms;
-    // clip-path: polygon(47% 53%, 100% 0, 100% 100%, 69% 100%, 0 100%);
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 
     @include abstracts.sm {
@@ -75,7 +71,6 @@
     @include abstracts.lg {
         clip-path: polygon(100% 0, 0% 100%, 100% 100%);
         clip-path: none;
-        // clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
         background: abstracts.$brand;
     } 
 
@@ -134,6 +129,7 @@
     top: calc(8vh + 20vh);
     padding: 0 5vw;
     height: min-content;
+    width: 450px;
     // padding: calc(8vh + 15vh) 5vw 1rem 5vw;
 
     &::after {
@@ -152,14 +148,15 @@
 
     // DESKTOP HERO
     @include abstracts.lg {
+        width: auto;
         // padding: 30vh 5vw;
     }
 
     h1 {
-            line-height: 1.2;
+            line-height: 1.4;
             margin-bottom: 1rem; 
             font-size: abstracts.$font-clamp-lg;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: capitalize;
         }
 

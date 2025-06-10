@@ -35,6 +35,7 @@
         display: grid;
         margin: 10vh auto;
         gap: 10vh;
+        
 
         // WIDER SCREENS GRID
         @include abstracts.md {
@@ -64,6 +65,10 @@
     position: relative;
     isolation: isolate;
     transition: 250ms;
+
+    h3 {
+        color: abstracts.$brand;
+    }
     
     ul {
         list-style: none;
@@ -75,7 +80,7 @@
 
     // DESKTOP ITEM STYLE
     @include abstracts.md {
-        padding: 0rem 1rem 4rem;
+        padding: 0.5rem 0.75rem;
     }
 
     // PSEUDO SHADOW
