@@ -124,12 +124,10 @@
 
 // HERO PAGE TITLE
 .hero-title {
-    // border: 3px solid blue;
     position: relative;
     top: calc(8vh + 20vh);
     padding: 0 5vw;
     height: min-content;
-    width: 450px;
     // padding: calc(8vh + 15vh) 5vw 1rem 5vw;
 
     &::after {
@@ -161,14 +159,16 @@
         }
 
         p {
-            line-height: 1.6;
+            width: 300px;
+            @include abstracts.md {
+                width: auto;
+            }
             &::first-letter {
                 text-transform: capitalize;
             }
             &::after {
                 content: '.';
             }
-            // font-family: abstracts.$font-content;
         }
 
 }
