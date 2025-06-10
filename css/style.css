@@ -116,19 +116,14 @@ section {
   transition: 0.5s;
 }
 .section-title.io-item h2 {
-  letter-spacing: 0.025rem;
   transition: 1s;
 }
 .section-title.io-item h2::after {
+  translate: 0 0.5rem;
   opacity: 0;
-  translate: 30vw;
-  transition: 1.5s;
-}
-.section-title.active-item h2 {
-  letter-spacing: normal;
+  transition: 100ms;
 }
 .section-title.active-item h2::after {
-  transform: scaleX(1);
   opacity: 1;
   translate: 0;
 }
@@ -181,7 +176,7 @@ h3 {
   text-wrap: balance;
   text-transform: capitalize;
   font-size: 1.025rem;
-  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.15rem, 2.25vw, 1.25rem);
   font-weight: 500;
 }
 
@@ -554,14 +549,14 @@ img {
   padding: 0;
 }
 #form .form-container-title h2 {
-  font-size: clamp(2rem, 5vw, 2.25rem);
+  font-size: clamp(1.25rem, 4vw, 2rem);
 }
 #form label {
   text-transform: capitalize;
 }
 #form input, #form textarea {
   display: block;
-  padding: 1rem 0.5rem;
+  padding: 0.5rem;
   margin: 1rem 0 1.5rem;
   width: 100%;
   border: none;
@@ -868,7 +863,7 @@ img {
 }
 .mission-container article h4 {
   text-transform: capitalize;
-  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.15rem, 2.25vw, 1.25rem);
   margin-bottom: 1rem;
 }
 .mission-container article p {
@@ -1041,7 +1036,7 @@ img {
   padding: 10vh 0 5vh;
 }
 #contact .section-title {
-  padding: 5vh 5vw;
+  padding: 0 5vw;
   color: #fff;
 }
 #contact .contact-items {
@@ -1395,7 +1390,7 @@ img {
   transition: 0.5s;
   height: 100%;
   width: auto;
-  width: 150px;
+  width: 100px;
   border-left: 1px solid #c65006;
 }
 .logo a {
@@ -2062,7 +2057,7 @@ aside.active .social-links a {
   text-transform: capitalize;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
-  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.15rem, 2.25vw, 1.25rem);
   transition: 0.25s;
 }
 @media (min-width: 500px) {
@@ -2377,8 +2372,8 @@ aside.active .social-links a {
 
 .service-container .grid-container {
   display: grid;
-  margin: 10vh auto;
-  gap: 10vh;
+  margin: 5vh auto;
+  gap: 5vh;
 }
 @media (min-width: 768px) {
   .service-container .grid-container {
@@ -2398,7 +2393,6 @@ aside.active .social-links a {
   background: #fafafa;
   width: 100%;
   padding: 1rem;
-  margin-bottom: 5vh;
   border-radius: 0.5rem;
   border: 1px solid #0001;
   position: relative;
@@ -2455,7 +2449,7 @@ aside.active .social-links a {
 .service-item .service-core h4 {
   text-transform: capitalize;
   font-size: 1.25rem;
-  font-size: clamp(1.25rem, 2.25vw, 1.25rem);
+  font-size: clamp(1.15rem, 2.25vw, 1.25rem);
   font-weight: 500;
   transition: 250ms ease;
 }

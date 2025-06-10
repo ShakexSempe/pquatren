@@ -12,7 +12,7 @@
         margin-bottom: 5vh;
         padding: 0;
         h2 {
-            font-size: abstracts.$font-clamp-xlg;
+            font-size: abstracts.$font-clamp-lg;
         }
     }
     
@@ -23,7 +23,7 @@
 
     input, textarea {
         display: block;
-        padding: 1rem .5rem;
+        padding: .5rem;
         margin: 1rem 0 1.5rem;
         width: 100%;
         border: none;

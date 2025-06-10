@@ -33,8 +33,8 @@
 
     .grid-container {
         display: grid;
-        margin: 10vh auto;
-        gap: 10vh;
+        margin: 5vh auto;
+        gap: 5vh;
         
 
         // WIDER SCREENS GRID
@@ -58,7 +58,6 @@
     background: #fafafa;
     width: 100%;
     padding: 1rem ;
-    margin-bottom: 5vh;
 
     border-radius: abstracts.$border-radius-sm;
     border: 1px solid #0001;

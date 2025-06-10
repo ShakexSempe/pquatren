@@ -92,24 +92,22 @@ section {
     // SECTION-TITLE IO
     &.io-item {
         h2 {
-            letter-spacing: .025rem;
+            // letter-spacing: .025rem;
             transition: 1s;
-
+            
             &::after {
-                // transform: scaleX(0);
+                translate: 0 .5rem;
                 opacity: 0;
-                translate: 30vw;
-                transition: 1.5s;
+                transition: 100ms;
             }
         }
     }
 
     &.active-item {
         h2 {
-            letter-spacing: normal;
+            // letter-spacing: normal;
 
             &::after {
-                transform: scaleX(1);
                 opacity: 1;
                 translate: 0;
                 // transition-delay: .5s;
